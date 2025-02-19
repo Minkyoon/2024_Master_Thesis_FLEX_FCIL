@@ -1,0 +1,13 @@
+wandb
+run
+exps
+__pycache__
+ckpt
+store
+pseudo
+txtresult
+txtresult_forfigure
+txtresult_forgifure
+code
+wstore
+
