@@ -9,7 +9,7 @@ FLEX integrates:
 - A design that significantly reduces **communication costs** while maintaining **state-of-the-art performance**.
 
 <p align="center">
-  <img src="./img/figure1.png" alt="FLEX Framework" width="600"/>
+  <img src="./imgs/figure1.png" alt="FLEX Framework" width="600"/>
 </p>
 
 **Figure 1**: Overview of the FLEX framework. The server uses ETF vectors for data-free knowledge transfer and generates pseudo features. The client integrates pseudo features, bounding loss, and knowledge distillation for efficient federated class-incremental learning.
@@ -46,7 +46,7 @@ The table below presents the performance comparison for **T=5 tasks** on CIFAR-1
 ### 2️⃣ Task-wise Performance Under Different Non-IID Settings
 
 <p align="center">
-  <img src="./img/figure2.png" alt="Task-wise Performance" width="600"/>
+  <img src="./imgs/figure2.png" alt="Task-wise Performance" width="600"/>
 </p>
 
 **Figure 2**: Task-wise performance comparison across different non-IID levels (β=1, β=0.5, β=0.3, β=0.1). FLEX demonstrates superior performance across most tasks, particularly in highly non-IID settings.
@@ -56,7 +56,7 @@ The table below presents the performance comparison for **T=5 tasks** on CIFAR-1
 One of FLEX’s major advantages is its **significant reduction in communication costs**. By freezing the feature extractor and only transmitting the **fully connected (FC) layer**, FLEX **reduces parameter exchange by approximately 20% per task**.
 
 <p align="center">
-  <img src="./img/figure4.png" alt="Communication Cost Reduction" width="600"/>
+  <img src="./imgs/figure3.png" alt="Communication Cost Reduction" width="600"/>
 </p>
 
 **Figure 4**: FLEX achieves **20% communication cost reduction per task** compared to existing methods.
@@ -78,7 +78,7 @@ cd 2024_Master_Thesis_FLEX_FCIL
 pip install -r requirements.txt
 ```
 
-### Traing
+### Training
 ```bash
 CUDA_VISIBLE_DEVICES=0 python main.py --group=c100t5 --exp_name=lander_b05 --dataset cifar100 --method=flex --tasks=5 --num_users 5 --beta=0.5 
 ```
